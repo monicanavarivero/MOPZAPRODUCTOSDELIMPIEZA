@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Principal y Local -->
+  <title>Productos de limpieza en Tampico | Mopza</title>
+  <meta name="description" content="Proveedor integral de productos para limpieza, higiene y operaciones de negocios. Venta al mayoreo para empresas, restaurantes, hoteles, gimnasios y más en Tampico, Ciudad Madero y Altamira.">
+  <meta name="keywords" content="productos de limpieza en Tampico, productos de limpieza en Ciudad Madero, productos de limpieza en Altamira, venta de productos de limpieza, productos de limpieza para empresas, productos de limpieza para restaurantes, productos de limpieza para hoteles, productos de limpieza para gimnasios, productos de limpieza para lavanderías, productos para autolavado, químicos de limpieza, artículos de limpieza, suministros de limpieza, proveedores de productos de limpieza, productos de limpieza al mayoreo">
+  <meta name="robots" content="index, follow">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navegación General -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="logo" onclick="showPage('inicio')">MOPZA</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" onclick="showPage('inicio')">Inicio</a>
+        <a href="#productos" onclick="showPage('productos')">Catálogo</a>
+        <a href="#contacto" onclick="showPage('contacto')">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== PÁGINA 1: INICIO ==================== -->
+  <main id="page-inicio" class="page active">
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+      <div class="container hero-content">
+        <h1>Proveedor integral de productos para limpieza, higiene y operaciones de negocios</h1>
+        <p class="hero-giros">Soluciones para: Restaurantes, Hoteles, Escuelas, Gimnasios, Lavanderías, Autolavados, Oficinas y más.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="showPage('productos')">Ver productos</button>
+          <a href="https://wa.me/528330000000?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización." class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2: ¿Qué puedes encontrar en Mopza? -->
+    <section class="find-section section-padding fade-in">
+      <div class="container">
+        <h2 class="section-title">¿Qué puedes encontrar en Mopza?</h2>
+        <div class="find-grid">
+          <div class="find-list">
+            <ul>
+              <li><span class="icon">🧼</span> Limpieza</li>
+              <li><span class="icon">🧴</span> Higiene personal</li>
+              <li><span class="icon">🚻</span> Baños y consumibles</li>
+              <li><span class="icon">👕</span> Lavandería</li>
+              <li><span class="icon">🚗</span> Cuidado automotriz</li>
+              <li><span class="icon">🧹</span> Herramientas de limpieza</li>
+              <li><span class="icon">🌸</span> Aromatización</li>
+            </ul>
+            <div style="margin-top: 1.5rem;">
+              <button class="btn btn-secondary" onclick="showPage('productos')">Ver catálogo completo</button>
+            </div>
+          </div>
+          <div class="find-image">
+  <img src="fotos/waiter-cleaning-bar-counter-before-work.jpg" alt="Productos de Limpieza Mopza">
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Productos para cada tipo de negocios -->
+    <section class="business-section section-padding fade-in">
+      <div class="container">
+        <h2 class="section-title">Productos para cada tipo de negocios</h2>
+        <p class="section-subtitle">Encuentra lo que necesita tu negocio</p>
+        
+        <div class="cards-grid">
+          <div class="card">
+            <i class="fas fa-utensils card-icon"></i>
+            <h3>Restaurantes</h3>
+            <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Restaurantes')">Ver catálogo completo</button>
+          </div>
+          <div class="card">
+            <i class="fas fa-hotel card-icon"></i>
+            <h3>Hoteles</h3>
+            <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Hoteles')">Ver catálogo completo</button>
+          </div>
+          <div class="card">
+            <i class="fas fa-dumbbell card-icon"></i>
+            <h3>Gimnasios</h3>
+            <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Gimnasios')">Ver catálogo completo</button>
+          </div>
+          <div class="card">
+            <i class="fas fa-soap card-icon"></i>
+            <h3>Lavanderías</h3>
+            <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Lavanderías')">Ver catálogo completo</button>
+          </div>
+          <div class="card">
+            <i class="fas fa-school card-icon"></i>
+            <h3>Escuelas</h3>
+            <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Escuelas')">Ver catálogo completo</button>
+          </div>
+          <div class="card">
+            <i class="fas fa-car-wash card-icon"></i>
+            <h3>Autolavados</h3>
+            <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Autolavados')">Ver catálogo completo</button>
+          </div>
+          <div class="card">
+            <i class="fas fa-building card-icon"></i>
+            <h3>Oficinas</h3>
+            <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Oficinas')">Ver catálogo completo</button>
+          </div>
+          <div class="card">
+            <i class="fas fa-church card-icon"></i>
+            <h3>Iglesias</h3>
+            <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Iglesias')">Ver catálogo completo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal para Productos por Giro -->
+    <div id="giroModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Productos sugeridos</h2>
+        <p>Lista inicial personalizada para tu giro:</p>
+        <ul id="giroProductList" class="giro-list">
+          <!-- Dinámico en JS (Inicialmente Cloro, Fabuloso, Pinol) -->
+        </ul>
+        <div class="modal-add-form">
+          <input type="text" id="newGiroProduct" placeholder="Agregar nuevo producto...">
+          <button class="btn btn-primary" onclick="addGiroProduct()">Agregar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección 4: ¿Por qué comprar con Mopza? -->
+    <section class="why-us section-padding fade-in">
+      <div class="container">
+        <h2 class="section-title">¿Por qué comprar con Mopza?</h2>
+        <div class="why-grid">
+          <div class="why-item"><span class="check">✓</span> Amplio catálogo</div>
+          <div class="why-item"><span class="check">✓</span> Productos para diferentes giros</div>
+          <div class="why-item"><span class="check">✓</span> Atención personalizada</div>
+          <div class="why-item"><span class="check">✓</span> Cotizaciones para negocios</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 5: ¿No encuentras lo que buscas? -->
+    <section class="cta-section section-padding fade-in">
+      <div class="container text-center">
+        <h2>¿No encuentras lo que buscas?</h2>
+        <p class="cta-text">Cuéntanos qué necesita tu negocio y te ayudaremos a encontrar la mejor opción.</p>
+        <a href="https://wa.me/528330000000?text=Hola,%20busco%20asesoría%20sobre%20productos%20de%20limpieza." class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Comunicarme con un experto
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== PÁGINA 2: CATÁLOGO Y PRODUCTOS ==================== -->
+  <main id="page-productos" class="page">
+    <section class="section-padding">
+      <div class="container">
+        <div class="catalog-header fade-in">
+          <h1>Catálogo Completo</h1>
+          <p>Explora nuestro catálogo por categoría</p>
+          <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Buscar producto en el catálogo..." onkeyup="filterProducts()">
+          </div>
+        </div>
+
+        <!-- Contenedor dinámico de categorías y listas -->
+        <div id="catalogContainer" class="fade-in">
+          <!-- Se genera dinámicamente con JavaScript -->
+        </div>
+
+        <div class="catalog-footer fade-in" style="margin-top: 3rem;">
+          <a href="https://wa.me/528330000000?text=Hola,%20quiero%20hacer%20una%20cotización%20del%20catálogo." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Hacer cotización por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== PÁGINA 3: CONTACTO ==================== -->
+  <main id="page-contacto" class="page">
+    <section class="section-padding fade-in">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2>Solicita tu Cotización</h2>
+            <p>Llena el formulario y nos pondremos en contacto contigo a la brevedad para estructurar la propuesta de tu negocio.</p>
+            <div class="info-items">
+              <p><i class="fas fa-map-marker-alt"></i> Cobertura en Tampico, Ciudad Madero y Altamira.</p>
+              <p><i class="fas fa-phone"></i> +52 (833) 000-0000</p>
+              <p><i class="fas fa-envelope"></i> contacto@mopza.com</p>
+            </div>
+          </div>
+          <div class="contact-form-card">
+            <form id="contactForm" onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" required placeholder="tuemail@ejemplo.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Número de Teléfono</label>
+                <input type="tel" id="phone" required placeholder="833 000 0000">
+              </div>
+              <div class="form-group">
+                <label for="message">Productos que ocupas o mensaje</label>
+                <textarea id="message" rows="4" required placeholder="Describe los productos y cantidades que requieres..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Solicitar Cotización</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/528330000000?text=Hola,%20me%20interesan%20tus%20productos%20de%20limpieza." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacto por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer General -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <h3>MOPZA</h3>
+        <p>Productos de limpieza en Tampico, Ciudad Madero y Altamira.</p>
+        <p>Atención especializada a empresas, industriales y comerciales.</p>
+      </div>
+      <div class="footer-socials">
+        <h4>Redes Sociales</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mopza. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,639 @@
+/* ==================== VARIABLES Y PALETA DE COLORES ==================== */
+:root {
+  --color-primary: #087EA4;     /* Azul limpio */
+  --color-secondary: #35B779;   /* Verde fresco */
+  --color-accent: #F5C542;      /* Amarillo energético */
+  --color-bg-main: #FFFFFF;     /* Blanco */
+  --color-bg-sec: #EAF7FA;      /* Azul muy claro */
+  --color-text-main: #16323F;   /* Azul oscuro */
+  --color-text-sec: #647984;    /* Gris azulado */
+  
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition: all 0.3s ease;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --border-radius: 8px;
+}
+
+/* ==================== RESETS & BASE ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 4rem 0;
+}
+
+/* ==================== NAVEGACIÓN ==================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg-main);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text-main);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* ==================== CONTROL DE PÁGINAS (SPA) ==================== */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ==================== BOTONES ==================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #066280;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background-color: #2b9964;
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-text-main);
+}
+
+.btn-accent:hover {
+  background-color: #e0b034;
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #FFFFFF;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1eb956;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ==================== PÁGINA INICIO ==================== */
+.hero {
+  background-color: var(--color-bg-sec);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.hero-giros {
+  font-size: 1.2rem;
+  color: var(--color-text-sec);
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Sección Encuentra */
+.section-title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--color-text-sec);
+  margin-bottom: 2.5rem;
+}
+
+.find-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.find-list ul {
+  list-style: none;
+}
+
+.find-list li {
+  font-size: 1.2rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.find-image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* Sección Cards Giro */
+.business-section {
+  background-color: var(--color-bg-sec);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #FFFFFF;
+  padding: 2rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Sección Por Qué Comprar */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.why-item {
+  background-color: var(--color-bg-sec);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.check {
+  color: var(--color-secondary);
+  font-size: 1.4rem;
+}
+
+/* Sección CTA */
+.cta-section {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.cta-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* ==================== PÁGINA CATÁLOGO ==================== */
+.catalog-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.catalog-header h1 {
+  color: var(--color-primary);
+}
+
+.search-box {
+  position: relative;
+  max-width: 500px;
+  margin: 1.5rem auto 0;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-sec);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.catalog-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+  box-shadow: var(--shadow);
+}
+
+.catalog-table th, .catalog-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.catalog-table th {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.price-input {
+  width: 80px;
+  padding: 0.4rem;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+}
+
+/* Estilo para los precios fijos en la tabla */
+.price-tag {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.05rem;
+}
+
+.catalog-footer {
+  text-align: center;
+}
+
+/* ==================== NUEVA ESTRUCTURA DE CATÁLOGO ==================== */
+.category-block {
+  background-color: #FFFFFF;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-left: 5px solid var(--color-primary);
+}
+
+.category-title {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-bg-sec);
+}
+
+.subcategory-title {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: 700;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed #E0E0E0;
+}
+
+.product-item:last-child {
+  border-bottom: none;
+}
+
+.product-name {
+  font-size: 1rem;
+  color: var(--color-text-main);
+}
+
+.product-price {
+  font-weight: 700;
+  color: var(--color-primary);
+  background-color: var(--color-bg-sec);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* ==================== PÁGINA CONTACTO ==================== */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background-color: var(--color-bg-sec);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+}
+
+.contact-info h2 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.info-items p {
+  margin-top: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.info-items i {
+  color: var(--color-secondary);
+}
+
+.contact-form-card {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+/* ==================== MODAL ==================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #FFFFFF;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.giro-list {
+  margin: 1.5rem 0;
+  padding-left: 1.2rem;
+}
+
+.modal-add-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.modal-add-form input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+/* ==================== WHATSAPP FLOTANTE ==================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background-color: var(--color-text-main);
+  color: #FFFFFF;
+  padding-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.social-icons a {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: var(--color-text-sec);
+}
+
+/* ==================== ANIMACIONES SUTILES DE SCROLL ==================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .find-grid, .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
