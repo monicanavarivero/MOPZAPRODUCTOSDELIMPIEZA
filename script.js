@@ -1,7 +1,7 @@
 // Estructura completa de Categorías y Productos
 const catalogCategories = [
   {
-    category: "1. LIMPIEZA GENERAL 🧼",
+    category: "1. LIMPIEZA PARA ESTABLECIMIENTOS",
     subcategories: [
       {
         sub: "Limpiadores",
@@ -9,157 +9,95 @@ const catalogCategories = [
           { name: "Cloro desinfectante C/20LTS", price: 160 },
           { name: "Fabuloso C/20LTS", price: 180 },
           { name: "Pino limpiador C/20 LTS", price: 210 },
+          { name: "Shampoo para manos C/20 LTS", price: 350 },
+          { name: "Lavatrastes C/20 LTS", price: 360 },
+          { name: "Lavatrastes ultra C/20 LTS", price: 380 },
           { name: "Elimina olores C/20 LTS", price: 400 },
-          { name: "Limpiavidrios C/20 LTS", price: 290 },
-          { name: "Desengrasante C/20 LTS", price: 420 },
           { name: "Quitacochambre C/20 LTS", price: 450 },
+          { name: "Desengrasante C/20 LTS", price: 420 },
           { name: "Ácido muriático C/1 LTS", price: 25 },
           { name: "Maestro limpiador C/20 LTS", price: 200 },
-          { name: "Pastillas para wc PIEZA", price: 17 }
-        ]
-      }
-    ]
-  },
-  {
-    category: "2. COCINA Y DESENGRASANTES 🍽️",
-    subcategories: [
-      {
-        sub: "Productos de cocina",
-        products: [
-          { name: "Lavatrastes C/20 LTS", price: 360 },
-          { name: "Quitacochambre C/20 LTS", price: 450 },
-          { name: "Desengrasante C/20 LTS", price: 420 },
-          { name: "Fibras pieza", price: 28 },
-          { name: "Shampoo para manos C/20 LTS", price: 350 },
-          { name: "Caja guantes nitrilo", price: 230 }
-        ]
-      }
-    ]
-  },
-  {
-    category: "3. BAÑOS E HIGIENE RESTROOMS 🚻",
-    subcategories: [
-      {
-        sub: "Productos de baño",
-        products: [
+          { name: "Sarricida C/20 LTS", price: 320 },
+          { name: "Limpiavidrios C/20 LTS", price: 290 },
+          { name: "Aromatizante ambiental C/20 LTS", price: 380 },
           { name: "Papel higiénico C/12 ROLLOS", price: 380 },
           { name: "Toalla en rollo cafe C/6 ROLLOS", price: 350 },
           { name: "Toalla en rollo blanca C/6 ROLLOS", price: 380 },
           { name: "Toalla interdoblada C/2000 PIEZAS", price: 280 },
-          { name: "Pastillas para WC PIEZA", price: 17 },
-          { name: "Ácido muriático C/1 LTS", price: 25 }
-        ]
-      },
-      {
-        sub: "Higiene personal",
-        products: [
-          { name: "Jabón para manos C/20 LTS", price: 350 },
+          { name: "Caja de servilletas", price: 500 },
+          { name: "Jabón en polvo 9 KG", price: 290 },
           { name: "Jabón corporal C/20 LTS", price: 450 },
           { name: "Shampoo C/20 LTS", price: 500 },
           { name: "Shampoo transparente C/20 LTS", price: 470 },
-          { name: "Shampoo Pantene", price: 500 }
-        ]
-      }
-    ]
-  },
-  {
-    category: "4. LAVANDERÍA 👕",
-    subcategories: [
-      {
-        sub: "Cuidado textil",
-        products: [
-          { name: "Jabón en polvo 9 KG", price: 290 },
-          { name: "Suavizante de telas C/20 LTS", price: 290 },
-          { name: "Vanish C/20 LTS", price: 360 },
-          { name: "Mas color C/20 LTS", price: 380 },
-          { name: "Zote pinol C/20 LTS", price: 410 }
-        ]
-      }
-    ]
-  },
-  {
-    category: "5. AROMATIZACIÓN 🌸",
-    subcategories: [
-      {
-        sub: "Aromas y ambientales",
-        products: [
-          { name: "Aromatizante ambiental C/20 LTS", price: 380 },
+          { name: "Shampoo Pantene", price: 500 },
           { name: "Aromas concentrados", price: "Cotizar" },
-          { name: "Reforzador de olores C/20 LTS", price: 380 },
+          { name: "Gel antibacterial C/20 LTS", price: 750 },
+          { name: "Shampoo para manos espuma C/20 LTS", price: 450 },
           { name: "Aromatizantes para interiores C/20 LTS", price: 180 }
         ]
       }
     ]
   },
   {
-    category: "6. BOLSAS Y DESECHABLES 🗑️",
+    category: "2. UTENCILIOS DE LIMPIEZA",
     subcategories: [
       {
-        sub: "Bolsas negras",
+        sub: "Productos",
         products: [
-          { name: "Bolsa chica", price: 65 },
-          { name: "Bolsa mediana", price: 65 },
-          { name: "Bolsa grande", price: 65 }
-        ]
-      },
-      {
-        sub: "Desechables",
-        products: [
-          { name: "Servilletas", price: 40 },
-          { name: "Toallas", price: 50 }
-        ]
-      }
-    ]
-  },
-  {
-    category: "7. HERRAMIENTAS DE LIMPIEZA 🧹",
-    subcategories: [
-      {
-        sub: "Utensilios y accesorios",
-        products: [
+          { name: "Caja guantes nitrilo", price: 230 },
+          { name: "Cepillos para WC PIEZA", price: 50 }, 
+          { name: "Bolsa chica 90x120", price: 65 },
+          { name: "Bolsa mediana 60x90", price: 65 },
+          { name: "Bolsa grande 50x70", price: 65 },
+          { name: "Bolsa camiseta mediana", price: 65 },
           { name: "Cubetas PIEZA", price: 130 },
           { name: "Trapeadores PIEZA", price: 85 },
           { name: "Escobas PIEZA", price: 85 },
           { name: "Jaladores PIEZA", price: 85 },
-          { name: "Plomeros / destapadores PIEZA", price: 75 },
+          { name: "Plumeros / destapadores PIEZA", price: 75 },
           { name: "Recogedores PIEZA", price: 50 },
-          { name: "Cepillos para WC PIEZA", price: 50 },
-          { name: "Fibras PIEZA", price: 28 },
+          { name: "Fibra scoth brite PIEZA", price: 28 },
+          { name: "Fibra metalica acero jumbo PIEZA", price: 17 },
           { name: "Microfibras PIEZA", price: 25 },
           { name: "Guantes PIEZA", price: 30 },
+          { name: "Tapete mijitorio PIEZA", price: 80 },
           { name: "Atomizadores PIEZA", price: 35 }
         ]
       }
     ]
   },
   {
-    category: "8. CUIDADO AUTOMOTRIZ 🚗",
+    category: "3. CUIDADO TEXTIL",
     subcategories: [
       {
-        sub: "Lavado exterior",
+        sub: "Productos de lavado",
+        products: [
+          { name: "Mas color C/20 LTS", price: 380 },
+          { name: "Mas color negro C/20 LTS", price: 380 },
+          { name: "Suavizante de telas C/20 LTS", price: 290 },
+          { name: "Zote pinol C/20 LTS", price: 410 },
+          { name: "Vanish C/20 LTS", price: 360 },
+          { name: "Plancha facil C/20 LTS", price: 350 },
+          { name: "Reforzador de olores C/20 LTS", price: 380 }
+        ]
+      }
+    ]
+  },
+  {
+    category: "4. CUIDADO AUTOMOTRIZ",
+    subcategories: [
+      {
+        sub: "Lavado exterior, interior, motor y llantas",
         products: [
           { name: "Shampoo para autos C/20 LTS", price: 370 },
           { name: "Cera liquida C/20 LTS", price: 700 },
           { name: "Almorol C/20 LTS", price: 460 },
-          { name: "Brillo para llantas C/20 LTS", price: 460 }
-        ]
-      },
-      {
-        sub: "Motor",
-        products: [
-          { name: "Desengrasante de motor C/20 LTS", price: 470 }
-        ]
-      },
-      {
-        sub: "Llantas",
-        products: [
           { name: "Brillo para llantas C/20 LTS", price: 460 },
-          { name: "Glicerina", price: 450 }
-        ]
-      },
-      {
-        sub: "Interiores",
-        products: [
+          { name: "Abrillantador para llantas en gel C/20 LTS", price: 750 },
+          { name: "Desengrasante de motor C/20 LTS", price: 470 },
+          { name: "Desengrasante interiores auto C/20 LTS", price: 420 },
+          { name: "Desengrasante de palomilla C/20 LTS", price: 580 },
+          { name: "Glicerina", price: 450 },
           { name: "Limpiador para interiores C/20 LTS", price: 420 },
           { name: "Aromatizante para auto C/20 LTS", price: 380 }
         ]
@@ -221,7 +159,7 @@ function renderCatalogGrouped(categories) {
     let blockHTML = `<h2 class="category-title">${catGroup.category}</h2>`;
 
     catGroup.subcategories.forEach(subGroup => {
-      if (subGroup.sub && subGroup.sub !== "General" && subGroup.sub !== "Limpiadores") {
+      if (subGroup.sub && subGroup.sub !== "General" && subGroup.sub !== "Limpiadores" && subGroup.sub !== "Productos") {
         blockHTML += `<h3 class="subcategory-title">${subGroup.sub}</h3>`;
       }
 
