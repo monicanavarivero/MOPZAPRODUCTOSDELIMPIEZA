@@ -38,7 +38,7 @@
         <p class="hero-giros">Soluciones para: Restaurantes, Hoteles, Escuelas, Gimnasios, Lavanderías, Autolavados, Oficinas y más.</p>
         <div class="hero-buttons">
           <button class="btn btn-primary" onclick="showPage('productos')">Ver productos</button>
-          <a href="https://wa.me/528330000000?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización." class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <a href="https://wa.me/528331861777?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización." class="btn btn-whatsapp" target="_blank" rel="noopener">
             <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
           </a>
         </div>
@@ -52,13 +52,13 @@
         <div class="find-grid">
           <div class="find-list">
             <ul>
-              <li><span class="icon">🧼</span> Limpieza</li>
-              <li><span class="icon">🧴</span> Higiene personal</li>
-              <li><span class="icon">🚻</span> Baños y consumibles</li>
-              <li><span class="icon">👕</span> Lavandería</li>
-              <li><span class="icon">🚗</span> Cuidado automotriz</li>
-              <li><span class="icon">🧹</span> Herramientas de limpieza</li>
-              <li><span class="icon">🌸</span> Aromatización</li>
+              <li><span class="icon"></span> Limpieza</li>
+              <li><span class="icon"></span> Higiene personal</li>
+              <li><span class="icon"></span> Baños y consumibles</li>
+              <li><span class="icon"></span> Lavandería</li>
+              <li><span class="icon"></span> Cuidado automotriz</li>
+              <li><span class="icon"></span> Herramientas de limpieza</li>
+              <li><span class="icon"></span> Aromatización</li>
             </ul>
             <div style="margin-top: 1.5rem;">
               <button class="btn btn-secondary" onclick="showPage('productos')">Ver catálogo completo</button>
@@ -104,10 +104,10 @@
             <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Escuelas')">Ver catálogo completo</button>
           </div>
           <div class="card">
-            <i class="fas fa-car-wash card-icon"></i>
-            <h3>Autolavados</h3>
-            <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Autolavados')">Ver catálogo completo</button>
-          </div>
+  <i class="fas fa-car card-icon"></i>
+  <h3>Autolavados</h3>
+  <button class="btn btn-accent btn-sm" onclick="showGiroProducts('Autolavados')">Ver catálogo completo</button>
+</div>
           <div class="card">
             <i class="fas fa-building card-icon"></i>
             <h3>Oficinas</h3>
@@ -122,21 +122,19 @@
       </div>
     </section>
 
-    <!-- Modal para Productos por Giro -->
-    <div id="giroModal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle">Productos sugeridos</h2>
-        <p>Lista inicial personalizada para tu giro:</p>
-        <ul id="giroProductList" class="giro-list">
-          <!-- Dinámico en JS (Inicialmente Cloro, Fabuloso, Pinol) -->
-        </ul>
-        <div class="modal-add-form">
-          <input type="text" id="newGiroProduct" placeholder="Agregar nuevo producto...">
-          <button class="btn btn-primary" onclick="addGiroProduct()">Agregar</button>
-        </div>
-      </div>
+   <!-- Modal para mostrar productos por giro de negocio -->
+<div id="giroModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle">Productos recomendados</h3>
+    
+    <div class="modal-body-scroll">
+      <ul id="giroProductList" class="giro-grid-list"></ul>
     </div>
+    
+    <button class="btn-secondary" onclick="closeModal()">Cerrar</button>
+  </div>
+</div>
 
     <!-- Sección 4: ¿Por qué comprar con Mopza? -->
     <section class="why-us section-padding fade-in">
@@ -156,7 +154,7 @@
       <div class="container text-center">
         <h2>¿No encuentras lo que buscas?</h2>
         <p class="cta-text">Cuéntanos qué necesita tu negocio y te ayudaremos a encontrar la mejor opción.</p>
-        <a href="https://wa.me/528330000000?text=Hola,%20busco%20asesoría%20sobre%20productos%20de%20limpieza." class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <a href="https://wa.me/528331861777?text=Hola,%20busco%20asesoría%20sobre%20productos%20de%20limpieza." class="btn btn-whatsapp" target="_blank" rel="noopener">
           <i class="fab fa-whatsapp"></i> Comunicarme con un experto
         </a>
       </div>
@@ -182,7 +180,7 @@
         </div>
 
         <div class="catalog-footer fade-in" style="margin-top: 3rem;">
-          <a href="https://wa.me/528330000000?text=Hola,%20quiero%20hacer%20una%20cotización%20del%20catálogo." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <a href="https://wa.me/528331861777?text=Hola,%20quiero%20hacer%20una%20cotización%20del%20catálogo." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
             <i class="fab fa-whatsapp"></i> Hacer cotización por WhatsApp
           </a>
         </div>
@@ -200,8 +198,8 @@
             <p>Llena el formulario y nos pondremos en contacto contigo a la brevedad para estructurar la propuesta de tu negocio.</p>
             <div class="info-items">
               <p><i class="fas fa-map-marker-alt"></i> Cobertura en Tampico, Ciudad Madero y Altamira.</p>
-              <p><i class="fas fa-phone"></i> +52 (833) 000-0000</p>
-              <p><i class="fas fa-envelope"></i> contacto@mopza.com</p>
+              <p><i class="fas fa-phone"></i> +52 (833) 186-1777</p>
+              <p><i class="fas fa-envelope"></i> mopzaventas@gmail.com</p>
             </div>
           </div>
           <div class="contact-form-card">
@@ -227,7 +225,7 @@
   </main>
 
   <!-- Botón Flotante de WhatsApp -->
-  <a href="https://wa.me/528330000000?text=Hola,%20me%20interesan%20tus%20productos%20de%20limpieza." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacto por WhatsApp">
+  <a href="https://wa.me/528331861777?text=Hola,%20me%20interesan%20tus%20productos%20de%20limpieza." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacto por WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -242,9 +240,10 @@
       <div class="footer-socials">
         <h4>Redes Sociales</h4>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/share/1K8PDcSemU/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://wa.me/528331861777" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
         </div>
       </div>
     </div>
