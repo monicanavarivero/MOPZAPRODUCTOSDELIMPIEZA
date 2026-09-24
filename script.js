@@ -1,4 +1,4 @@
-// Estructura completa de Categorías y Productos
+// ==================== ESTRUCTURA DE CATÁLOGO COMPLETO ====================
 const catalogCategories = [
   {
     category: "1. LIMPIEZA PARA ESTABLECIMIENTOS",
@@ -97,7 +97,7 @@ const catalogCategories = [
           { name: "Desengrasante de motor C/20 LTS", price: 470 },
           { name: "Desengrasante interiores auto C/20 LTS", price: 420 },
           { name: "Desengrasante de palomilla C/20 LTS", price: 580 },
-          { name: "Glicerina", price: 450 },
+          { name: "Glicerina C/20 LTS", price: 450 },
           { name: "Limpiador para interiores C/20 LTS", price: 420 },
           { name: "Aromatizante para auto C/20 LTS", price: 380 }
         ]
@@ -106,21 +106,254 @@ const catalogCategories = [
   }
 ];
 
-// Almacén de listas por giro
+// ==================== ALMACÉN DE PRODUCTOS POR GIRO ====================
 const giroProductsData = {
-  'Restaurantes': ['Cloro desinfectante C/20LTS', 'Lavatrastes C/20 LTS', 'Quitacochambre C/20 LTS', 'Desengrasante C/20 LTS', 'Fibras pieza'],
-  'Hoteles': ['Papel higiénico C/12 ROLLOS', 'Toalla en rollo blanca C/6 ROLLOS', 'Jabón corporal C/20 LTS', 'Shampoo C/20 LTS', 'Aromatizante ambiental C/20 LTS'],
-  'Gimnasios': ['Cloro desinfectante C/20LTS', 'Limpiavidrios C/20 LTS', 'Toalla interdoblada C/2000 PIEZAS', 'Jabón para manos C/20 LTS'],
-  'Lavanderías': ['Jabón en polvo 9 KG', 'Suavizante de telas C/20 LTS', 'Vanish C/20 LTS', 'Mas color C/20 LTS'],
-  'Escuelas': ['Cloro desinfectante C/20LTS', 'Pino limpiador C/20 LTS', 'Jabón para manos C/20 LTS', 'Papel higiénico C/12 ROLLOS', 'Bolsa grande'],
-  'Autolavados': ['Shampoo para autos C/20 LTS', 'Cera liquida C/20 LTS', 'Almorol C/20 LTS', 'Brillo para llantas C/20 LTS', 'Microfibras PIEZA'],
-  'Oficinas': ['Limpiavidrios C/20 LTS', 'Aromatizante ambiental C/20 LTS', 'Papel higiénico C/12 ROLLOS', 'Fabuloso C/20LTS'],
-  'Iglesias': ['Pino limpiador C/20 LTS', 'Aromatizante ambiental C/20 LTS', 'Papel higiénico C/12 ROLLOS', 'Escobas PIEZA', 'Trapeadores PIEZA']
+  'Restaurantes': [
+    'CLORO',
+    'FABULOSO',
+    'PINOL',
+    'SHAMPOO PARA MANOS',
+    'GEL ANTIBACTERIAL',
+    'AXION LAVA TRASTES',
+    'ELIMINA OLORES',
+    'QUITA COCHAMBRE',
+    'DESENGRASANTE',
+    'SARRICIDA',
+    'MAESTRO LIMPIO',
+    'ACIDO MURIATICO 1 LT',
+    'CAJA GUANTES NITRILO 100 PZAS',
+    'CEPILLO PARA WC',
+    'LIMPIA VIDRIOS',
+    'AROMATIZANTE AMBIENTAL',
+    'TAPETE PARA MIITORIO' ,
+    'PAPEL HIGIENICO JRO C/12 ROLLOS',
+    'TOALLA ROLLO CAFÉ',
+    'TOALLA ROLLO BLANCA',
+    'TOALLA INTERDOBLADA C/2000 PZAS',
+    'JABON EN POLVO 9 KG',
+    'PASTILLAS PARA WC',
+    'BOLSA NEGRA',
+    'CAJA DE SERVILLETAS',
+    'CAJA PASTILLAS WC 50PZS',
+    'BOLSA DE CAMISETA MEDIANA',
+    'CUBETA C/ EXPRIMIDOR',
+    'TRAPEADOR DE RAYON',
+    'TRAPEADOR MAGITEL MEDIANO',
+    'TRAPEADOR DE COLORES ALGODÓN',
+    'ESCOBA MEGA',
+    'ESCOBA DE ESPIGA',
+    'ESCOBA CEPILLO',
+    'JALADOR DE PISO',
+    'JALADOR DE VIDRIO',
+    'RECOGEDOR DE PLASTICO',
+    'FIBRA ESPONJA SCOTCH BRITE',
+    'FIBRA VERDE CHICA',
+    'FIBRA NEGRA',
+    'FIBRA METALICA ACERO JUMBO',
+    'MICROFIBRA'
+  ],
+  'Hoteles': [
+    'CLORO',
+    'FABULOSO',
+    'PINOL',
+    'SHAMPOO PARA MANOS',
+    'GEL ANTIBACTERIAL',
+    'ELIMINA OLORES',
+    'SARRICIDA',
+    'MAESTRO LIMPIO',
+    'ACIDO MURIATICO',
+    'CEPILLO PARA WC',
+    'LIMPIA VIDRIOS',
+    'AROMATIZANTE AMBIENTAL',
+    'TAPETE PARA MIITORIO' ,
+    'PAPEL HIGIENICO JRO C/12 ROLLOS',
+    'TOALLA ROLLO CAFÉ',
+    'TOALLA ROLLO BLANCA',
+    'JABON EN POLVO 9 KG',
+    'PASTILLAS PARA WC',
+    'BOLSA NEGRA',
+    'JABON CORPORAL', 
+    'SHAMPOO', 
+    'CAJA PASTILLAS WC 50PZS',
+    'BOLSA DE CAMISETA MEDIANA',
+    'CUBETA C/ EXPRIMIDOR',
+    'TRAPEADOR DE RAYON',
+    'TRAPEADOR MAGITEL MEDIANO',
+    'TRAPEADOR DE COLORES ALGODÓN',
+    'ESCOBA MEGA',
+    'ESCOBA DE ESPIGA',
+    'ESCOBA CEPILLO',
+    'JALADOR DE PISO',
+    'JALADOR DE VIDRIO',
+    'RECOGEDOR DE PLASTICO',
+    
+  ],
+  'Gimnasios': [
+    'CLORO',
+    'FABULOSO',
+    'PINOL',
+    'SHAMPOO PARA MANOS',
+    'GEL ANTIBACTERIAL',
+    'ELIMINA OLORES',
+    'SARRICIDA',
+    'MAESTRO LIMPIO',
+    'ACIDO MURIATICO',
+    'CEPILLO PARA WC',
+    'LIMPIA VIDRIOS',
+    'AROMATIZANTE AMBIENTAL',
+    'PAPEL HIGIENICO JRO C/12 ROLLOS',
+    'TOALLA ROLLO CAFÉ',
+    'TOALLA ROLLO BLANCA',
+    'PASTILLAS PARA WC',
+    'BOLSA NEGRA',
+    'JABON CORPORAL', 
+    'SHAMPOO', 
+    'CAJA PASTILLAS WC 50PZS',
+    'CUBETA C/ EXPRIMIDOR',
+    'TRAPEADOR DE RAYON',
+    'TRAPEADOR MAGITEL MEDIANO',
+    'TRAPEADOR DE COLORES ALGODÓN',
+    'ESCOBA MEGA',
+    'ESCOBA DE ESPIGA',
+    'ESCOBA CEPILLO',
+    'JALADOR DE PISO',
+    'JALADOR DE VIDRIO',
+    'RECOGEDOR DE PLASTICO',
+    'FIBRA ESPONJA SCOTCH BRITE',
+    'FIBRA VERDE CHICA',
+    'FIBRA NEGRA',
+    'FIBRA METALICA ACERO JUMBO',
+    'MICROFIBRA' ,
+    'TAPETE PARA MIITORIO' ,
+
+    
+  ],
+  'Lavanderías': [
+    'JABON EN POLVO 9 KG', 
+    'SUAVISANTE DE TELAS C/20 LTS', 
+    'VANISH', 
+    'ZOTE PINOL', 
+    'PLACHA FACIL', 
+    'REFORZADOR DE OLORES', 
+    'MAS COLOR', 
+    'MAS COLOR NEGRO'
+
+
+  ],
+  'Escuelas': [
+    'CLORO',
+    'FABULOSO',
+    'PINOL',
+    'JABON EN POLVO 9 KG', 
+    'SHAMPOO PARA MANOS',
+    'GEL ANTIBACTERIAL',
+    'ELIMINA OLORES',
+    'SARRICIDA',
+    'MAESTRO LIMPIO',
+    'CEPILLO PARA WC',
+    'LIMPIA VIDRIOS',
+    'AROMATIZANTE AMBIENTAL',
+    'BOLSA NEGRA',
+    'PAPEL HIGIENICO JRO C/12 ROLLOS',
+    'CUBETA C/ EXPRIMIDOR',
+    'TRAPEADOR DE RAYON',
+    'TRAPEADOR MAGITEL MEDIANO',
+    'TRAPEADOR DE COLORES ALGODÓN',
+    'ESCOBA MEGA',
+    'ESCOBA DE ESPIGA',
+    'ESCOBA CEPILLO',
+    'JALADOR DE PISO',
+    'JALADOR DE VIDRIO',
+    'RECOGEDOR DE PLASTICO',
+    'FIBRA ESPONJA SCOTCH BRITE',
+    'FIBRA VERDE CHICA',
+    'FIBRA NEGRA',
+    'FIBRA METALICA ACERO JUMBO',
+    'MICROFIBRA' ,
+  ],
+  'Autolavados': [
+    'SHAMPOO PARA AUTOS', 
+    'CERA LIQUIDA', 
+    'ALMOROL', 
+    'BRILLO PARA LLANTAS', 
+    'ABRILLANTADOR DE LLANTAS EN GEL',
+    'DESENGRASANTE DE MOTOR',
+    'DESENGRASANTE DE INTERIORES',
+    'DESENGRASANTE DE PALOMILLA',
+    'GLICERINA',
+    'LIMPIADOR PARA INTERIORES',
+    'AROMATIZANTE PARA AUTO',
+    'MICROFIBRA PIEZA'
+
+  ],
+  'Oficinas': [
+    'CLORO',
+    'FABULOSO',
+    'PINOL',
+    'SHAMPOO PARA MANOS',
+    'GEL ANTIBACTERIAL',
+    'AXION LAVA TRASTES',
+    'ELIMINA OLORES',
+    'SARRICIDA',
+    'MAESTRO LIMPIO',
+    'ACIDO MURIATICO 1 LT',
+    'CEPILLO PARA WC',
+    'LIMPIA VIDRIOS',
+    'AROMATIZANTE AMBIENTAL',
+    'PAPEL HIGIENICO JRO C/12 ROLLOS',
+    'TOALLA ROLLO CAFÉ',
+    'TOALLA ROLLO BLANCA',
+    'PASTILLAS PARA WC',
+    'BOLSA NEGRA',
+    'BOLSA DE CAMISETA MEDIANA',
+    'CUBETA C/ EXPRIMIDOR',
+    'TRAPEADOR DE RAYON',
+    'TRAPEADOR MAGITEL MEDIANO',
+    'TRAPEADOR DE COLORES ALGODÓN',
+    'ESCOBA MEGA',
+    'ESCOBA DE ESPIGA',
+    'ESCOBA CEPILLO',
+    'JALADOR DE PISO',
+    'JALADOR DE VIDRIO',
+    'RECOGEDOR DE PLASTICO',
+    'FIBRA ESPONJA SCOTCH BRITE',
+    'FIBRA VERDE CHICA',
+    'FIBRA NEGRA',
+    'FIBRA METALICA ACERO JUMBO',
+    'MICROFIBRA'
+  ],
+  'Iglesias': [
+    'CLORO',
+    'FABULOSO',
+    'PINOL',
+    'GEL ANTIBACTERIAL',
+    'ELIMINA OLORES',
+    'SARRICIDA',
+    'ACIDO MURIATICO 1 LT',
+    'CEPILLO PARA WC',
+    'LIMPIA VIDRIOS',
+    'AROMATIZANTE AMBIENTAL',
+    'PAPEL HIGIENICO JRO C/12 ROLLOS',
+    'PASTILLAS PARA WC',
+    'BOLSA NEGRA',
+    'BOLSA DE CAMISETA MEDIANA',
+    'CUBETA C/ EXPRIMIDOR',
+    'TRAPEADOR DE RAYON',
+    'TRAPEADOR MAGITEL MEDIANO',
+    'TRAPEADOR DE COLORES ALGODÓN',
+    'ESCOBA MEGA',
+    'ESCOBA DE ESPIGA',
+    'ESCOBA CEPILLO',
+    'JALADOR DE PISO',
+    'JALADOR DE VIDRIO',
+    'RECOGEDOR DE PLASTICO',
+    'MICROFIBRA'
+  ]
 };
 
 let currentGiro = '';
 
-// ==================== NAVEGACIÓN Y PÁGINAS ====================
+// ==================== NAVEGACIÓN Y PÁGINAS (SPA) ====================
 function showPage(pageId) {
   const pages = document.querySelectorAll('.page');
   pages.forEach(page => page.classList.remove('active'));
@@ -137,7 +370,7 @@ function showPage(pageId) {
   }
 }
 
-// Menú Móvil
+// Control del menú hamburguesa para móviles
 const menuToggle = document.getElementById('menuToggle');
 if (menuToggle) {
   menuToggle.addEventListener('click', () => {
@@ -145,7 +378,7 @@ if (menuToggle) {
   });
 }
 
-// ==================== RENDERING DE CATÁLOGO AGRUPADO ====================
+// ==================== CATÁLOGO PRINCIPAL ====================
 function renderCatalogGrouped(categories) {
   const container = document.getElementById('catalogContainer');
   if (!container) return;
@@ -184,7 +417,7 @@ function renderCatalogGrouped(categories) {
   });
 }
 
-// Filtrar productos manteniendo categorías
+// Buscador de productos
 function filterProducts() {
   const searchInput = document.getElementById('searchInput');
   if (!searchInput) return;
@@ -214,7 +447,7 @@ function showGiroProducts(giro) {
   const modalTitle = document.getElementById('modalTitle');
   const giroModal = document.getElementById('giroModal');
   
-  if (modalTitle) modalTitle.innerText = `Productos sugeridos para ${giro}`;
+  if (modalTitle) modalTitle.innerText = `Productos recomendados para ${giro}`;
   renderGiroList();
   if (giroModal) giroModal.style.display = 'block';
 }
@@ -231,27 +464,20 @@ function renderGiroList() {
   });
 }
 
-function addGiroProduct() {
-  const input = document.getElementById('newGiroProduct');
-  if (!input) return;
-
-  const val = input.value.trim();
-  if (val && currentGiro) {
-    if (!giroProductsData[currentGiro]) {
-      giroProductsData[currentGiro] = [];
-    }
-    giroProductsData[currentGiro].push(val);
-    input.value = '';
-    renderGiroList();
-  }
-}
-
 function closeModal() {
   const giroModal = document.getElementById('giroModal');
   if (giroModal) giroModal.style.display = 'none';
 }
 
-// ==================== ANIMACIONES EN SCROLL ====================
+// Cierre del modal al dar clic fuera de la ventana blanca
+window.onclick = function(event) {
+  const giroModal = document.getElementById('giroModal');
+  if (event.target === giroModal) {
+    closeModal();
+  }
+};
+
+// ==================== ANIMACIONES DE SCROLL Y FORMULARIO ====================
 function setupScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -264,7 +490,6 @@ function setupScrollAnimations() {
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 }
 
-// Formulario de Contacto
 function handleFormSubmit(e) {
   e.preventDefault();
   alert('¡Gracias por comunicarte con Mopza! Nos pondremos en contacto contigo a la brevedad.');
@@ -272,7 +497,7 @@ function handleFormSubmit(e) {
   if (contactForm) contactForm.reset();
 }
 
-// Inicialización
+// Inicialización de funciones
 document.addEventListener('DOMContentLoaded', () => {
   renderCatalogGrouped(catalogCategories);
   setupScrollAnimations();
